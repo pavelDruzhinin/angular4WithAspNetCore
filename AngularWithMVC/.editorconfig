@@ -1,0 +1,21 @@
+﻿root = true
+
+[*.cs]
+indent_style = tab
+indent_size = 4
+tab_size = 4
+
+[*.ts]
+indent_style = tab
+indent_size = 4
+tab_size = 4
+
+[*.html]
+indent_style = tab
+indent_size = 4
+tab_size = 4
+
+[*.css]
+indent_style = tab
+indent_size = 4
+tab_size = 4

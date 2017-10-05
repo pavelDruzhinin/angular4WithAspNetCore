@@ -1,0 +1,19 @@
+﻿<h2>Статьи</h2>
+<a routerLink="/blog/create" routerLinkActive="active">Добавить статью</a>
+<div [hidden]="blogPosts.length > 0">У вас нет статей. Нажмите добавить статью</div>
+<table class="table" [hidden]="blogPosts.length == 0">
+	<thead>
+		<tr>
+			<th>Название</th>
+			<th>Автор</th>
+			<th>Дата публикации</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr *ngFor="let blogPost of blogPosts">
+		<td [textContent]="blogPost.subject"></td>
+		<td [textContent]="blogPost.writer.fullName"></td>
+		<td [textContent]="blogPost.publishDate | date: 'dd/MM/yyyy'"></td>
+	</tr>
+	</tbody>
+</table>

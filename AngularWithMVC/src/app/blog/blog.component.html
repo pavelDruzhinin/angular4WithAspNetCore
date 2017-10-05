@@ -1,0 +1,18 @@
+﻿<form (ngSubmit)="create()" #createBlog="ngForm">
+	<h3>Новая статья</h3>
+	<div class="form-group">
+		<label for="subject">Название</label>
+		<input type="text" id="subject" name="subject" class="form-control" required
+			   [(ngModel)]="blog.subject" />
+	</div>
+	<div class="form-group">
+		<label for="body">Содержание</label>
+		<textarea type="text" id="body" name="body" class="form-control" required
+				  [(ngModel)]="blog.body"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="publishDate">Дата публикации</label>
+		<material-datepicker id="publishDate" name="publishDate" placeholder="" [(date)]="blog.publishDate" [(dateFormat)]="DD-MM-YYYY"></material-datepicker>
+	</div>
+	<button type="submit" class="btn btn-success" [disabled]="!createBlog.form.valid">Создать</button>
+</form>
